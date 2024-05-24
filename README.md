@@ -81,3 +81,194 @@ Deep learning, a subset of machine learning, focuses on neural networks with man
 - **Matching Networks:** Uses attention and memory to learn from a few examples.
 
 This list includes many of the core algorithms and architectures in deep learning, covering a broad spectrum of applications and approaches. The field of deep learning is dynamic, and new models and techniques continue to emerge, so staying updated with the latest research and advancements is essential.
+
+
+# Activation Functions
+Here is a comprehensive list of activation functions commonly used in deep learning, along with brief descriptions:
+
+1. **Sigmoid**:
+   - **Equation**: \( \sigma(x) = \frac{1}{1 + e^{-x}} \)
+   - **Range**: (0, 1)
+   - **Usage**: Commonly used in the output layer for binary classification problems.
+
+2. **Hyperbolic Tangent (Tanh)**:
+   - **Equation**: \( \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} \)
+   - **Range**: (-1, 1)
+   - **Usage**: Often used in hidden layers, especially in older neural networks.
+
+3. **Rectified Linear Unit (ReLU)**:
+   - **Equation**: \( f(x) = \max(0, x) \)
+   - **Range**: [0, ∞)
+   - **Usage**: Widely used in hidden layers due to its simplicity and effectiveness.
+
+4. **Leaky ReLU**:
+   - **Equation**: \( f(x) = \max(0.01x, x) \)
+   - **Range**: (-∞, ∞)
+   - **Usage**: Mitigates the "dying ReLU" problem by allowing a small gradient when the unit is not active.
+
+5. **Parametric ReLU (PReLU)**:
+   - **Equation**: \( f(x) = \max(\alpha x, x) \), where \(\alpha\) is a learnable parameter.
+   - **Range**: (-∞, ∞)
+   - **Usage**: Allows the network to learn the appropriate slope for negative inputs.
+
+6. **Exponential Linear Unit (ELU)**:
+   - **Equation**: \( f(x) = x \) if \( x \geq 0 \); \( f(x) = \alpha (e^x - 1) \) if \( x < 0 \)
+   - **Range**: (-α, ∞)
+   - **Usage**: Aims to bring mean activations closer to zero and reduce computational complexity.
+
+7. **Scaled Exponential Linear Unit (SELU)**:
+   - **Equation**: \( f(x) = \lambda (x) \) if \( x \geq 0 \); \( f(x) = \lambda \alpha (e^x - 1) \) if \( x < 0 \), where \(\lambda\) and \(\alpha\) are specific constants.
+   - **Range**: (-λ, ∞)
+   - **Usage**: Used in self-normalizing neural networks to maintain a normalized output.
+
+8. **Softmax**:
+   - **Equation**: \( \sigma(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}} \)
+   - **Range**: (0, 1)
+   - **Usage**: Commonly used in the output layer for multi-class classification problems.
+
+9. **Swish**:
+   - **Equation**: \( f(x) = x \cdot \sigma(x) \), where \(\sigma(x)\) is the sigmoid function.
+   - **Range**: (-∞, ∞)
+   - **Usage**: Shows better performance in deeper networks and has smooth properties.
+
+10. **Gaussian**:
+    - **Equation**: \( f(x) = e^{-x^2} \)
+    - **Range**: (0, 1)
+    - **Usage**: Rarely used; can be found in Radial Basis Function networks.
+
+11. **Binary Step**:
+    - **Equation**: \( f(x) = \begin{cases} 0 & \text{if } x < 0 \\ 1 & \text{if } x \geq 0 \end{cases} \)
+    - **Range**: {0, 1}
+    - **Usage**: Used in perceptrons and early neural networks; rarely used in modern networks due to non-differentiability.
+
+12. **Hard Sigmoid**:
+    - **Equation**: \( f(x) = \begin{cases} 0 & \text{if } x < -2.5 \\ 1 & \text{if } x > 2.5 \\ 0.2x + 0.5 & \text{otherwise} \end{cases} \)
+    - **Range**: [0, 1]
+    - **Usage**: Provides a computationally efficient approximation to the sigmoid function.
+
+13. **Hard Tanh**:
+    - **Equation**: \( f(x) = \begin{cases} -1 & \text{if } x < -1 \\ 1 & \text{if } x > 1 \\ x & \text{otherwise} \end{cases} \)
+    - **Range**: [-1, 1]
+    - **Usage**: Efficient approximation to the Tanh function.
+
+14. **Softplus**:
+    - **Equation**: \( f(x) = \log(1 + e^x) \)
+    - **Range**: (0, ∞)
+    - **Usage**: Smooth approximation to ReLU, ensuring positive outputs.
+
+15. **Softsign**:
+    - **Equation**: \( f(x) = \frac{x}{1 + |x|} \)
+    - **Range**: (-1, 1)
+    - **Usage**: Similar to Tanh but computationally cheaper.
+
+These activation functions serve various purposes and have unique properties that make them suitable for different types of neural network architectures and tasks.
+
+
+
+# Optmizers
+
+Here is a comprehensive list of optimizers commonly used in deep learning, along with brief descriptions:
+
+### 1. Gradient Descent Variants
+- **Gradient Descent (GD)**:
+  - Updates weights using the entire dataset.
+  - Slow convergence, but accurate for convex problems.
+
+- **Stochastic Gradient Descent (SGD)**:
+  - Updates weights using one sample at a time.
+  - Faster convergence but more noisy updates.
+
+- **Mini-Batch Gradient Descent**:
+  - Updates weights using a small batch of samples.
+  - Balances speed and accuracy.
+
+### 2. Adaptive Learning Rate Methods
+- **Adagrad (Adaptive Gradient Algorithm)**:
+  - Adjusts learning rate based on past gradients.
+  - Works well for sparse data but can suffer from diminishing learning rates.
+
+- **Adadelta**:
+  - Extension of Adagrad that seeks to reduce its learning rate decay.
+  - No need to manually set a learning rate.
+
+- **RMSprop (Root Mean Square Propagation)**:
+  - Combines the advantages of Adagrad and momentum.
+  - Maintains a moving average of squared gradients to adjust the learning rate.
+
+- **Adam (Adaptive Moment Estimation)**:
+  - Combines RMSprop and momentum.
+  - Maintains moving averages of both the gradients and the squared gradients.
+  - Often works well in practice and is widely used.
+
+- **Adamax**:
+  - Variant of Adam based on the infinity norm.
+  - More robust for large gradients.
+
+- **Nadam (Nesterov-accelerated Adaptive Moment Estimation)**:
+  - Combines Adam with Nesterov momentum.
+  - Aims to provide better convergence properties.
+
+### 3. Momentum-Based Methods
+- **Momentum**:
+  - Accelerates gradient descent by adding a fraction of the previous update.
+  - Helps to navigate ravines faster.
+
+- **Nesterov Accelerated Gradient (NAG)**:
+  - Improves momentum by looking ahead at the future position of the parameters.
+  - Often leads to better performance and faster convergence.
+
+### 4. Second-Order Methods
+- **Newton’s Method**:
+  - Uses second-order derivatives (Hessian matrix) for optimization.
+  - Computationally expensive but accurate.
+
+- **Quasi-Newton Methods (e.g., BFGS, L-BFGS)**:
+  - Approximate Newton’s method.
+  - Used for optimization when second-order derivatives are too costly.
+
+### 5. Other Methods
+- **Averaged SGD**:
+  - Averages the weights over iterations.
+  - Reduces the variance of the updates.
+
+- **SGD with Warm Restarts**:
+  - Periodically restarts the learning rate to escape local minima.
+  - Can improve convergence.
+
+- **SGDR (SGD with Restarts)**:
+  - Uses cosine annealing to adjust the learning rate.
+  - Incorporates warm restarts for better performance.
+
+- **AMSGrad**:
+  - Variant of Adam to address convergence issues by using the maximum of past squared gradients.
+
+- **AdaMax**:
+  - Variant of Adam based on the infinity norm, providing more robust convergence.
+
+- **YellowFin**:
+  - Automatically tunes the hyperparameters of SGD with momentum.
+  - Targets a balance between fast convergence and stability.
+
+- **LARS (Layer-wise Adaptive Rate Scaling)**:
+  - Adjusts the learning rate for each layer independently.
+  - Useful for training large-scale neural networks.
+
+- **RAdam (Rectified Adam)**:
+  - Rectifies the variance of adaptive learning rates in Adam.
+  - Stabilizes training in the early stages.
+
+- **Lookahead Optimizer**:
+  - Enhances any base optimizer by looking ahead in the optimization path.
+  - Can provide better performance and stability.
+
+### Hybrid and Ensemble Methods
+- **AdaBound**:
+  - Combines Adam with dynamic bounds on learning rates.
+  - Aims to achieve better generalization.
+
+- **QHAdam (Quasi-Hyperbolic Adam)**:
+  - Combines Adam with quasi-hyperbolic momentum.
+  - Provides more flexible adaptation to the optimization landscape.
+
+These optimizers are designed to improve the training efficiency and performance of deep learning models. Each has its strengths and weaknesses, making them suitable for different types of problems and datasets.
+
