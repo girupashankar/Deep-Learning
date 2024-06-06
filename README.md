@@ -163,6 +163,137 @@ Here is a comprehensive list of activation functions commonly used in deep learn
 
 These activation functions serve various purposes and have unique properties that make them suitable for different types of neural network architectures and tasks.
 
+# Evaluation Metrics
+Model evaluation metrics are essential for assessing the performance of deep learning models. The choice of metric depends on the type of problem (classification, regression, etc.) and the specific requirements of the task. Here’s a comprehensive list of model evaluation metrics used in deep learning:
+
+### Classification Metrics
+1. **Accuracy**
+   - Proportion of correctly predicted instances out of the total instances.
+
+2. **Precision**
+   - Proportion of true positive instances out of the predicted positive instances.
+   - \( \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}} \)
+
+3. **Recall (Sensitivity or True Positive Rate)**
+   - Proportion of true positive instances out of the actual positive instances.
+   - \( \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} \)
+
+4. **F1 Score**
+   - Harmonic mean of precision and recall.
+   - \( \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} \)
+
+5. **Specificity (True Negative Rate)**
+   - Proportion of true negative instances out of the actual negative instances.
+   - \( \text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}} \)
+
+6. **ROC-AUC Score (Receiver Operating Characteristic - Area Under Curve)**
+   - Measures the trade-off between true positive rate and false positive rate.
+
+7. **Precision-Recall AUC**
+   - Measures the trade-off between precision and recall.
+
+8. **Log Loss (Cross-Entropy Loss)**
+   - Measures the performance of a classification model with probability outputs.
+
+9. **Confusion Matrix**
+   - A table showing true positives, true negatives, false positives, and false negatives.
+
+10. **Matthews Correlation Coefficient (MCC)**
+    - Takes into account true and false positives and negatives.
+    - \( \text{MCC} = \frac{TP \times TN - FP \times FN}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}} \)
+
+11. **Cohen's Kappa**
+    - Measures the agreement between two raters.
+
+12. **Balanced Accuracy**
+    - Average of recall obtained on each class.
+
+### Regression Metrics
+1. **Mean Absolute Error (MAE)**
+   - Average of absolute differences between predicted and actual values.
+   - \( \text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat{y}_i| \)
+
+2. **Mean Squared Error (MSE)**
+   - Average of squared differences between predicted and actual values.
+   - \( \text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2 \)
+
+3. **Root Mean Squared Error (RMSE)**
+   - Square root of MSE.
+   - \( \text{RMSE} = \sqrt{\text{MSE}} \)
+
+4. **Mean Squared Logarithmic Error (MSLE)**
+   - Measures the ratio between the true and predicted values.
+   - \( \text{MSLE} = \frac{1}{n} \sum_{i=1}^n (\log(1 + y_i) - \log(1 + \hat{y}_i))^2 \)
+
+5. **R-squared (Coefficient of Determination)**
+   - Proportion of variance in the dependent variable predictable from the independent variables.
+   - \( R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2} \)
+
+6. **Adjusted R-squared**
+   - Adjusted for the number of predictors in the model.
+
+7. **Mean Absolute Percentage Error (MAPE)**
+   - Measures the accuracy as a percentage of the error.
+   - \( \text{MAPE} = \frac{100}{n} \sum_{i=1}^n \left| \frac{y_i - \hat{y}_i}{y_i} \right| \)
+
+8. **Median Absolute Error**
+   - Median of absolute differences between predicted and actual values.
+
+### Ranking Metrics
+1. **Mean Reciprocal Rank (MRR)**
+   - Average of the reciprocal ranks of results.
+
+2. **Normalized Discounted Cumulative Gain (NDCG)**
+   - Measures the usefulness of a document based on its position in the result list.
+
+3. **Average Precision at K (AP@K)**
+   - Measures the precision of the top K predictions.
+
+### Clustering Metrics
+1. **Silhouette Score**
+   - Measures how similar an object is to its own cluster compared to other clusters.
+
+2. **Adjusted Rand Index (ARI)**
+   - Measures the similarity between two data clusterings.
+
+3. **Mutual Information**
+   - Measures the amount of information obtained about one random variable through the other.
+
+4. **Homogeneity, Completeness, and V-measure**
+   - Metrics for evaluating the quality of clustering.
+
+5. **Davies-Bouldin Index**
+   - Ratio of within-cluster distances to between-cluster distances.
+
+### Segmentation Metrics (Computer Vision)
+1. **Intersection over Union (IoU)**
+   - Measures the overlap between predicted and ground truth masks.
+   - \( \text{IoU} = \frac{\text{Intersection}}{\text{Union}} \)
+
+2. **Dice Coefficient (F1 Score for Segmentation)**
+   - Measures the similarity between two samples.
+   - \( \text{Dice} = \frac{2 \times \text{Intersection}}{\text{Total number of pixels in both images}} \)
+
+3. **Pixel Accuracy**
+   - Proportion of correctly classified pixels.
+
+4. **Mean Pixel Accuracy**
+   - Average pixel accuracy across classes.
+
+5. **Mean Intersection over Union (mIoU)**
+   - Average IoU across classes.
+
+### Generative Models Metrics
+1. **Inception Score (IS)**
+   - Evaluates the quality of generated images based on the inception model.
+
+2. **Frechet Inception Distance (FID)**
+   - Measures the distance between the distributions of generated and real images.
+
+3. **Structural Similarity Index (SSIM)**
+   - Measures the similarity between two images.
+
+These metrics cover a wide range of evaluation methods for different types of models and tasks in deep learning.
 
 
 # Optmizers
