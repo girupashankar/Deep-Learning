@@ -1,4 +1,4 @@
-![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/f4a24292-321d-40bc-87c8-842860381e7a)# Deep-Learning
+# Deep-Learning
 Deep learning, a subset of machine learning, focuses on neural networks with many layers (deep neural networks). It encompasses a wide range of algorithms and architectures tailored to specific tasks and data types. Here is a comprehensive list of deep learning algorithms, categorized by their primary use cases:
 
 ### 1. **Feedforward Neural Networks (FNN)**
