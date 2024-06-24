@@ -1,4 +1,4 @@
-# Deep-Learning
+![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/f4a24292-321d-40bc-87c8-842860381e7a)# Deep-Learning
 Deep learning, a subset of machine learning, focuses on neural networks with many layers (deep neural networks). It encompasses a wide range of algorithms and architectures tailored to specific tasks and data types. Here is a comprehensive list of deep learning algorithms, categorized by their primary use cases:
 
 ### 1. **Feedforward Neural Networks (FNN)**
@@ -87,27 +87,30 @@ This list includes many of the core algorithms and architectures in deep learnin
 Here is a comprehensive list of activation functions commonly used in deep learning, along with brief descriptions:
 
 1. **Sigmoid**:
-   - **Equation**: \( \sigma(x) = \frac{1}{1 + e^{-x}} \)
+   - **Equation**: ![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/ec07f3a8-7816-4b9e-9fca-078c2836682a)
    - **Range**: (0, 1)
    - **Usage**: Commonly used in the output layer for binary classification problems.
 
 2. **Hyperbolic Tangent (Tanh)**:
-   - **Equation**: \( \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} \)
+   - **Equation**: ![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/b9af3524-2e88-42ba-a31a-d37bfcd66de2)
    - **Range**: (-1, 1)
    - **Usage**: Often used in hidden layers, especially in older neural networks.
 
 3. **Rectified Linear Unit (ReLU)**:
-   - **Equation**: \( f(x) = \max(0, x) \)
+   - **Equation**: ![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/326f240d-3111-4d4b-b61a-0031a776dcec)
+
    - **Range**: [0, ∞)
    - **Usage**: Widely used in hidden layers due to its simplicity and effectiveness.
 
 4. **Leaky ReLU**:
-   - **Equation**: \( f(x) = \max(0.01x, x) \)
+   - **Equation**: ![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/a039f0ba-8f36-443c-a7fd-04b483863603)
+
    - **Range**: (-∞, ∞)
    - **Usage**: Mitigates the "dying ReLU" problem by allowing a small gradient when the unit is not active.
 
 5. **Parametric ReLU (PReLU)**:
-   - **Equation**: \( f(x) = \max(\alpha x, x) \), where \(\alpha\) is a learnable parameter.
+   - **Equation**: ![image](https://github.com/girupashankar/Deep-Learning/assets/164706869/ca8970bd-5bd6-4acc-aa41-ec449adffec1)
+ , where \(\alpha\) is a learnable parameter.
    - **Range**: (-∞, ∞)
    - **Usage**: Allows the network to learn the appropriate slope for negative inputs.
 
